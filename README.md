@@ -12,14 +12,19 @@
 
 若一方射擊，而另一方既未射擊也未防禦，射擊者立即獲勝；雙方同時射擊或射擊遇到防禦時，遊戲繼續。
 
-## 檔案
+## 原始碼檔案
 
 - `exact_game.py`：以 `fractions.Fraction` 做有限期上下截止遞迴，並精確驗證低資源 37 個有序狀態的漂移與逃離機率不等式。
 - `explore_game.cpp`：使用雙精度浮點數探索有限期上下界、零截止值與第二回合策略的數值趨勢。
 - `make_report_figures.py`：自動編譯 `explore_game.cpp`，產生 `report_data.json`、`figure_gap.png` 與 `figure_strategy.png`。
 - `build_full_report.py`：根據資料與圖片建立完整 Word 科展報告。
-- `report_data.json`：本次報告使用的數值輸出。
-- `game_theory_science_fair_report.docx`：已產生的報告成品。
+- `requirements.txt`：Python 套件需求。
+
+## 已附與可重新產生的輸出
+
+- `report_data.json`：本次報告使用的數值輸出，並可由 `make_report_figures.py` 重新產生。
+- `figure_gap.png`、`figure_strategy.png`：由數值資料產生的兩張圖。
+- `game_theory_science_fair_report.docx`：由 `build_full_report.py` 產生的報告成品；若 GitHub 儲存庫未附二進位成品，仍可依下方步驟在本機重建。
 
 ## 環境需求
 
@@ -96,4 +101,3 @@ A = V(5,2),  B = V(2,1),
 ```text
 (L, S, D) = (B, A, 1) / (1 + A + B).
 ```
-
