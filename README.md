@@ -74,13 +74,6 @@ g++ -std=c++17 -O2 -DNDEBUG explore_game.cpp -o explore_game
 - `figure_gap.png`
 - `figure_strategy.png`
 
-### 3. 重新建立 Word 報告
-
-```bash
-python build_full_report.py
-```
-
-輸出檔為 `game_theory_science_fair_report.docx`。報告指定中文標楷體、英文 Times New Roman；若電腦沒有標楷體，Word 可能使用替代字型。
 
 ## 嚴格證明與數值探索的區別
 
